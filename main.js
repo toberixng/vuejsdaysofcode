@@ -2,12 +2,60 @@ var app = new Vue({ // create a new view instance whis is the rootof vue applica
     el: '#app',
     data: {
         product: 'Socks',
-        image: './assets/vmSocks-green.jpg',
-        tobylink: 'https://www.tobyfatumo.ga',
-        inventory: 100
+        image: '/assets/vmSocks-green.jpg',
+        inStock: true,
+        details: ["80% cotton", "20% polyester", "Gender-neutral"],
+        variants: [
+            {
+                variantId: 2234,
+                variantColor: "green"
+            },
+            {
+                variantId: 2235,
+                variantColor: "blue"
+            },   
+        ],
+        cart: 0
+    },
+    methods: {
+        addToCart(){
+            this.cart += 1
+        }
     }
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+var app = new Vue({ // create a new view instance whis is the rootof vue application is the root 
+    el: '#app',
+    data: {
+        product: 'Socks',
+        image: './assets/vmSocks-green.jpg',
+        tobylink: 'https://www.tobyfatumo.ga',
+        inStock: true,
+        details: ["80% cotton", "20% polyester", "Gender-neutral"],
+        variants: [
+            {
+                variantId: 2234,
+                variantColor: "green"
+            },
+            {
+                variantId: 2235,
+                variantColor: "Blue"
+            }
+        ]
+    }
+})
 // Despite all the activities today, I was able to fulful todays task #100DaysOfCode
 
 // Today, I learnt about Vue instance, attribute binding "v-bind", conditional rendering(v-if, v-else-if, v-else, v-show), 

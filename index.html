@@ -11,8 +11,7 @@
     <div class="nav-bar"></div>
 
     <div id="app">
-        <div class="product">
-            
+        <div class="product"> 
             <div class="product-image">
                 <img v-bind:src="image">
             </div>
@@ -29,6 +28,13 @@
                 <div v-for="variant in variants">
                     <p>{{variant.variantColor}}</p>
                 </div>
+
+                <button v-on:click="addToCart">Add to Cart</button>
+
+                <div class="cart">
+                    <p>Cart ({{ cart }})</p>
+                </div>
+                
             </div>
         </div>   
     </div>
